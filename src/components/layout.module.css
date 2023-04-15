@@ -1,0 +1,11 @@
+.container {
+  margin: auto;
+  font-family: sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-grow: 1;
+}
