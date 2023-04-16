@@ -1,15 +1,14 @@
 import * as React from 'react'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import { graphql } from 'gatsby'
-import { skillsList } from './skills.module.css'
+import { infoBox } from './layout.module.css'
 
 const Skills = ({ data }) => {
   return (
-    <div>
-      <h2>Skills</h2>
-      <ul className={skillsList}>
+    <div className={infoBox}>
+      <h3>Skills</h3>
+      <ul style={{ listStyleType: 'none' }}>
         {data.map((node) => (
-          <li key={node.name}>
+          <li key={node.name} style={{ display: 'inline' }}>
             <GatsbyImage
               alt={node.name}
               image={getImage(node.childImageSharp)}
@@ -26,14 +25,3 @@ const Skills = ({ data }) => {
 }
 
 export default Skills
-
-export const query = graphql`
-  fragment SkillsInfo on allFile {
-    nodes {
-      childImageSharp {
-        gatsbyImageData(width: 50, placeholder: BLURRED)
-      }
-      name
-    }
-  }
-`

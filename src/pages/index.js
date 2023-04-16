@@ -4,9 +4,9 @@ import AboutMe from '../components/aboutme'
 import Skills from '../components/skills'
 import Contact from '../components/contact'
 import Education from '../components/education/education'
-import Portfolio from '../components/portfolio'
-import Experience from '../components/experience'
-import { container } from './index.module.css'
+import Portfolio from '../components/portfolio/portfolio'
+import Experience from '../components/experience/experience'
+import { container, introduction, info } from './index.module.css'
 import { graphql } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 
@@ -14,26 +14,34 @@ const IndexPage = ({ data }) => {
   console.log(data)
   return (
     <Layout>
-      <div className={container} style={{ padding: '10%' }}>
-        <StaticImage
-          alt='A picture of me, Malte, outside.'
-          src='../images/profile-pic.jpg'
-          style={{
-            width: '25%'
-          }}
-          imgStyle={{
-            borderRadius: '50%'
-          }}
-        />
-        <h1>Malte Nilsson</h1>
-        <h2>.NET Developer</h2>
-        <p>I'm looking for a new job! Available from June 2023.</p>
+      <div className={container}>
+        <div id={introduction}>
+          <StaticImage
+            alt='A picture of me, Malte, outside.'
+            src='../images/profile-pic.jpg'
+            style={{
+              width: '30%',
+              border: '2px solid rgb(235, 241, 248)',
+              borderRadius: '50%'
+            }}
+          />
+          <h1>Malte Nilsson</h1>
+          <h2>.NET Developer</h2>
+          <p
+            style={{
+              background: 'rgb(28, 27, 41, 0.7)',
+              padding: '5px'
+            }}
+          >
+            I'm looking for a new job! Available from June 2023.
+          </p>
+        </div>
       </div>
 
-      <div className={container} style={{ padding: '5%' }}>
+      <div className={container} id={info}>
         <AboutMe />
         <Skills data={data.allFile.nodes} />
-        <Education data={data.allMdx.edges} />
+        <Education />
         <Portfolio />
         <Experience />
         <Contact />
@@ -49,10 +57,12 @@ export default IndexPage
 export const query = graphql`
   query {
     allFile {
-      ...SkillsInfo
-    }
-    allMdx {
-      ...EducationInfo
+      nodes {
+        childImageSharp {
+          gatsbyImageData(width: 50, placeholder: BLURRED)
+        }
+        name
+      }
     }
   }
 `

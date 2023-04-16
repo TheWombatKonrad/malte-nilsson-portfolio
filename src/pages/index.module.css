@@ -2,4 +2,31 @@
   border: 1px solid black;
   width: 49%;
   box-sizing: border-box;
+  height: calc(100vh - 20px);
+  margin: auto;
+  background-color: inherit;
+}
+
+#introduction {
+  box-sizing: border-box;
+  height: 400px;
+  width: 75%;
+  border-radius: 20px;
+  padding: 4%;
+  margin: auto;
+  margin-top: calc((100vh - 20px) / 4);
+  background-image: url('../images/space-theme.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: rgb(235, 241, 248);
+}
+
+#info {
+  overflow-y: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+#info::-webkit-scrollbar {
+  display: none;
 }
