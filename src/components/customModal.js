@@ -1,6 +1,5 @@
 import * as React from 'react'
-import { Button } from 'antd'
-import { btn, arrow, modalStyle } from './layout.module.css'
+import { btn, arrow, modalStyle } from './customModal.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRightLong, faXmark } from '@fortawesome/free-solid-svg-icons'
 import Modal from 'react-modal'
@@ -36,15 +35,10 @@ const CustomModal = ({ date, title, children }) => {
 
   return (
     <div>
-      <Button
-        type='text'
-        onClick={openModal}
-        className={btn}
-        style={{ backgroundColor: 'inherit', color: 'inherit' }}
-      >
+      <button type='text' onClick={openModal} className={btn}>
         <span>{title}</span>
-        <FontAwesomeIcon icon={faArrowRightLong} className={arrow} />
-      </Button>
+        {/* <FontAwesomeIcon icon={faArrowRightLong} className={arrow} /> */}
+      </button>
       <Modal
         contentLabel={title}
         isOpen={modalIsOpen}

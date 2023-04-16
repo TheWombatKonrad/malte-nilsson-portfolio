@@ -1,0 +1,56 @@
+.modalStyle {
+  width: 100%;
+  height: 100%;
+  background: rgb(28, 27, 41);
+  box-sizing: border-box;
+  padding: 3% 5%;
+  box-sizing: border-box;
+}
+
+.modalStyle div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.modalStyle div p {
+  margin: 0;
+}
+
+.modalStyle div button {
+  background: inherit;
+  color: inherit;
+  border: none;
+  font-size: x-large;
+  left: 80%;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.btn {
+  font-size: inherit;
+  background: inherit;
+  border: none;
+  color: inherit;
+}
+
+.btn:hover .arrow {
+  opacity: 1;
+  right: -5rem;
+  font-size: inherit;
+}
+
+.arrow {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: -2rem;
+  top: 0;
+  opacity: 0;
+  height: 100%;
+  transition: all 0.2s linear 0s;
+  font-size: xx-small;
+}
