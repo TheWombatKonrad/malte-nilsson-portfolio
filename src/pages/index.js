@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Layout from '../components/layout'
-import AboutMe from '../components/aboutme'
+import AboutMe from '../components/aboutMe'
 import Skills from '../components/skills'
 import Contact from '../components/contact'
 import Education from '../components/education/education'
@@ -11,7 +11,6 @@ import { graphql } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 
 const IndexPage = ({ data }) => {
-  console.log(data)
   return (
     <Layout>
       <div className={container}>
