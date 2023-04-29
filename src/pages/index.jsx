@@ -9,6 +9,7 @@ import Experience from '../components/experience/experience'
 import { container, introduction, info } from './index.module.css'
 import { graphql } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
+import { SEO } from '../components/seo'
 
 const IndexPage = ({ data }) => {
   return (
@@ -49,7 +50,20 @@ const IndexPage = ({ data }) => {
   )
 }
 
-export const Head = () => <title>Malte Nilsson || .NET Developer</title>
+export const Head = () => (
+  <SEO>
+    <script type='application/ld+json'>
+      {`
+    {
+      "@context": "https://schema.org",
+      "@type": "CV",
+      "url": "https://malte-nilsson.se",
+      "name": "Malte Nilsson || .NET Developer"
+    }
+  `}
+    </script>
+  </SEO>
+)
 
 export default IndexPage
 

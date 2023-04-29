@@ -4,7 +4,8 @@
 module.exports = {
   siteMetadata: {
     title: 'Malte Nilsson || .NET Developer',
-    siteUrl: `https://www.yourdomain.tld`
+    description: "Malte Nilsson's CV",
+    siteUrl: 'https://www.malte-nilsson.se'
   },
   plugins: [
     'gatsby-plugin-image',
@@ -23,6 +24,12 @@ module.exports = {
       options: {
         name: `education`,
         path: `${__dirname}/src/components/education`
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: 'src/assets/images/space-img2.png'
       }
     }
   ]

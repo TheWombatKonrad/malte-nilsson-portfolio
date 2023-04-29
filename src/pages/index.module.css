@@ -1,20 +1,32 @@
 .container {
-  border: 1px solid black;
-  width: 49%;
   box-sizing: border-box;
-  height: calc(100vh - 20px);
   margin: auto;
   background-color: inherit;
 }
 
+@media only screen and (min-width: 700px) {
+  .container {
+    width: 49%;
+    border: 1px solid black;
+  }
+
+  #introduction {
+    width: 75%;
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #introduction {
+    /* box-shadow: 0px 5px 2px rgb(30, 26, 48); */
+  }
+}
+
 #introduction {
   box-sizing: border-box;
-  height: 400px;
-  width: 75%;
-  border-radius: 20px;
   padding: 4%;
-  margin: auto;
-  margin-top: calc((100vh - 20px) / 4);
   background-image: url('../images/space-theme.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -22,9 +34,8 @@
 }
 
 #info {
+  height: 100vh;
   overflow-y: auto;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
 }
 
 #info::-webkit-scrollbar {
