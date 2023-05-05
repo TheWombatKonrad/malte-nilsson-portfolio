@@ -20,7 +20,9 @@ const IndexPage = ({ data }) => {
 
   useEffect(() => {
     const handleWindowResize = () => {
-      setWindowSize([window.innerWidth, window.innerHeight])
+      if (typeof window !== `undefined`) {
+        setWindowSize([window.innerWidth, window.innerHeight])
+      }
     }
 
     window.addEventListener('resize', handleWindowResize)
