@@ -1,0 +1,16 @@
+.intro-photo {
+  border: 2px solid rgb(235, 241, 248);
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 419px) {
+  .intro-photo {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 419px) and (max-width: 800px) {
+  .intro-photo {
+    width: 30%;
+  }
+}

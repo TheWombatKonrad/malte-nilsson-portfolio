@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Layout from '../components/layout'
 import AboutMe from '../components/aboutMe'
 import Skills from '../components/skills'
@@ -6,52 +6,76 @@ import Contact from '../components/contact'
 import Education from '../components/education/education'
 import Portfolio from '../components/portfolio/portfolio'
 import Experience from '../components/experience/experience'
-import { container, introduction, info } from './index.module.css'
+import Header from '../components/header'
+import Introduction from '../components/introduction'
+import { container, info, introduction } from './index.module.css'
 import { graphql } from 'gatsby'
-import { StaticImage } from 'gatsby-plugin-image'
-import { SEO } from '../components/seo'
+import { Seo } from '../components/seo'
 
 const IndexPage = ({ data }) => {
-  return (
-    <Layout>
-      <div className={container}>
-        <div id={introduction}>
-          <StaticImage
-            alt='A picture of me, Malte, outside.'
-            src='../images/profile-pic.jpg'
-            style={{
-              width: '30%',
-              border: '2px solid rgb(235, 241, 248)',
-              borderRadius: '50%'
-            }}
-          />
-          <h1>Malte Nilsson</h1>
-          <h2>.NET Developer</h2>
-          <p
-            style={{
-              background: 'rgb(28, 27, 41, 0.7)',
-              padding: '5px'
-            }}
-          >
-            I'm looking for a new job! Available from June 2023.
-          </p>
-        </div>
-      </div>
+  const [windowSize, setWindowSize] = useState([
+    window.innerWidth,
+    window.innerHeight
+  ])
 
-      <div className={container} id={info}>
-        <AboutMe />
-        <Skills data={data.allFile.nodes} />
-        <Education />
-        <Portfolio />
-        <Experience />
-        <Contact />
-      </div>
-    </Layout>
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowSize([window.innerWidth, window.innerHeight])
+    }
+
+    window.addEventListener('resize', handleWindowResize)
+
+    console.log(windowSize)
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize)
+    }
+  }, [windowSize])
+
+  const [headerHeight, setHeaderHeight] = useState(0)
+  const headerRef = useRef()
+
+  useEffect(() => {
+    if (!headerRef?.current?.clientHeight) {
+      return
+    }
+    setHeaderHeight(headerRef?.current?.clientHeight)
+  }, [headerRef?.current?.clientHeight])
+
+  return (
+    <>
+      {windowSize[0] < '800' && (
+        <header className={introduction} id='header' ref={headerRef}>
+          <Header />
+        </header>
+      )}
+      <Layout height={windowSize[1] - headerHeight}>
+        {windowSize[0] >= '800' && (
+          <div
+            className={container}
+            style={{ height: '100vh', display: 'flex' }}
+          >
+            <div className={introduction}>
+              <Introduction />
+            </div>
+          </div>
+        )}
+
+        <div className={container} id={info}>
+          <AboutMe />
+          <Skills data={data.allFile.nodes} />
+          <Education />
+          <Portfolio />
+          <Experience />
+          <Contact />
+        </div>
+      </Layout>
+    </>
   )
 }
 
 export const Head = () => (
-  <SEO>
+  <Seo>
     <script type='application/ld+json'>
       {`
     {
@@ -62,7 +86,7 @@ export const Head = () => (
     }
   `}
     </script>
-  </SEO>
+  </Seo>
 )
 
 export default IndexPage
@@ -72,7 +96,7 @@ export const query = graphql`
     allFile {
       nodes {
         childImageSharp {
-          gatsbyImageData(width: 50, placeholder: BLURRED)
+          gatsbyImageData(placeholder: BLURRED)
         }
         name
       }
