@@ -48,7 +48,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <>
-      {startingWindowSize != null && (
+      {windowSize != null && (
         <>
           {windowSize[0] < '800' && (
             <header className={introduction} id='header' ref={headerRef}>
