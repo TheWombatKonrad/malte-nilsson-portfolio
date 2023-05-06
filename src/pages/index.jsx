@@ -29,7 +29,6 @@ const IndexPage = ({ data }) => {
     window.addEventListener('resize', handleWindowResize)
 
     console.log(windowSize)
-    console.log(typeof window)
 
     return () => {
       window.removeEventListener('resize', handleWindowResize)
@@ -48,25 +47,25 @@ const IndexPage = ({ data }) => {
 
   return (
     <>
-      {windowSize != null && (
-        <>
-          {windowSize[0] < '800' && (
-            <header className={introduction} id='header' ref={headerRef}>
-              <Header />
-            </header>
-          )}
-          <Layout height={windowSize[1] - headerHeight}>
-            {windowSize[0] >= '800' && (
-              <div
-                className={container}
-                style={{ height: '100vh', display: 'flex' }}
-              >
-                <div className={introduction}>
-                  <Introduction />
-                </div>
-              </div>
-            )}
+      {windowSize[0] < '800' && (
+        <header className={introduction} id='header' ref={headerRef}>
+          <Header />
+        </header>
+      )}
+      <Layout height={windowSize[1] - headerHeight}>
+        {windowSize[0] >= '800' && (
+          <div
+            className={container}
+            style={{ height: '100vh', display: 'flex' }}
+          >
+            <div className={introduction}>
+              <Introduction />
+            </div>
+          </div>
+        )}
 
+        <>
+          {windowSize[0] > 0 && (
             <div className={container} id={info}>
               <AboutMe />
               <Skills data={data.allFile.nodes} />
@@ -75,9 +74,9 @@ const IndexPage = ({ data }) => {
               <Experience />
               <Contact />
             </div>
-          </Layout>
+          )}
         </>
-      )}
+      </Layout>
     </>
   )
 }
