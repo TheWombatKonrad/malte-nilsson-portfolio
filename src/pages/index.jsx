@@ -34,7 +34,7 @@ const IndexPage = ({ data }) => {
     return () => {
       window.removeEventListener('resize', handleWindowResize)
     }
-  })
+  }, [windowSize])
 
   const [headerHeight, setHeaderHeight] = useState(0)
   const headerRef = useRef()
