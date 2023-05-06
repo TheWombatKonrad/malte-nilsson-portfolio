@@ -13,10 +13,7 @@ import { graphql } from 'gatsby'
 import { Seo } from '../components/seo'
 
 const IndexPage = ({ data }) => {
-  const [windowSize, setWindowSize] = useState([
-    window.innerWidth,
-    window.innerHeight
-  ])
+  const [windowSize, setWindowSize] = useState([])
 
   useEffect(() => {
     if (typeof window !== `undefined`) {
