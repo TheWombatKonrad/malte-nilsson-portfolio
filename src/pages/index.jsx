@@ -13,7 +13,13 @@ import { graphql } from 'gatsby'
 import { Seo } from '../components/seo'
 
 const IndexPage = ({ data }) => {
-  const [windowSize, setWindowSize] = useState([])
+  let startingWindowSize = []
+
+  if (typeof window !== 'undefined') {
+    startingWindowSize = [window.innerWidth, window.innerHeight]
+  }
+
+  const [windowSize, setWindowSize] = useState(startingWindowSize)
 
   useEffect(() => {
     const handleWindowResize = () => {
@@ -28,7 +34,7 @@ const IndexPage = ({ data }) => {
     return () => {
       window.removeEventListener('resize', handleWindowResize)
     }
-  }, [windowSize])
+  })
 
   const [headerHeight, setHeaderHeight] = useState(0)
   const headerRef = useRef()
