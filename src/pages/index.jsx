@@ -13,7 +13,7 @@ import { graphql } from 'gatsby'
 import { Seo } from '../components/seo'
 
 const IndexPage = ({ data }) => {
-  let startingWindowSize = []
+  let startingWindowSize = [undefined]
 
   if (typeof window !== 'undefined') {
     startingWindowSize = [window.innerWidth, window.innerHeight]
@@ -48,32 +48,36 @@ const IndexPage = ({ data }) => {
 
   return (
     <>
-      {windowSize[0] < '800' && (
-        <header className={introduction} id='header' ref={headerRef}>
-          <Header />
-        </header>
-      )}
-      <Layout height={windowSize[1] - headerHeight}>
-        {windowSize[0] >= '800' && (
-          <div
-            className={container}
-            style={{ height: '100vh', display: 'flex' }}
-          >
-            <div className={introduction}>
-              <Introduction />
-            </div>
-          </div>
-        )}
+      {startingWindowSize != null && (
+        <>
+          {windowSize[0] < '800' && (
+            <header className={introduction} id='header' ref={headerRef}>
+              <Header />
+            </header>
+          )}
+          <Layout height={windowSize[1] - headerHeight}>
+            {windowSize[0] >= '800' && (
+              <div
+                className={container}
+                style={{ height: '100vh', display: 'flex' }}
+              >
+                <div className={introduction}>
+                  <Introduction />
+                </div>
+              </div>
+            )}
 
-        <div className={container} id={info}>
-          <AboutMe />
-          <Skills data={data.allFile.nodes} />
-          <Education />
-          <Portfolio />
-          <Experience />
-          <Contact />
-        </div>
-      </Layout>
+            <div className={container} id={info}>
+              <AboutMe />
+              <Skills data={data.allFile.nodes} />
+              <Education />
+              <Portfolio />
+              <Experience />
+              <Contact />
+            </div>
+          </Layout>
+        </>
+      )}
     </>
   )
 }
