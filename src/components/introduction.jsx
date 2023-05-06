@@ -21,10 +21,11 @@ const Introduction = () => {
           alt='A picture of me, Malte, outside.'
           src='../images/profile-pic.jpg'
           aspectRatio={1 / 1}
+          loading='blurred'
           style={{
             border: '2px solid rgb(235, 241, 248)',
             borderRadius: '50%',
-            width: '50%'
+            width: '40%'
           }}
         />
       </div>

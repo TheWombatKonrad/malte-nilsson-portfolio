@@ -30,6 +30,7 @@ const Header = () => {
           alt='A picture of me, Malte, outside.'
           src='../images/profile-pic.jpg'
           aspectRatio={1 / 1}
+          loading='blurred'
           className={introPhoto}
         />
       </div>
