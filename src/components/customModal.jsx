@@ -1,12 +1,12 @@
-import * as React from 'react'
-import { btn, arrow, modalStyle } from './customModal.module.css'
+import React, { useEffect, useState } from 'react'
+import { btn, innerModal } from './customModal.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRightLong, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faXmark, faAnglesRight } from '@fortawesome/free-solid-svg-icons'
 import Modal from 'react-modal'
 
-const customStyles = {
+const customStylesBig = {
   content: {
-    height: '50%',
+    height: '300px',
     width: '50%',
     margin: 'auto',
     padding: 0,
@@ -16,9 +16,56 @@ const customStyles = {
   }
 }
 
+const customStylesSmall = {
+  content: {
+    height: '300px',
+    width: '90%',
+    margin: 'auto',
+    padding: 0,
+    borderRadius: '20px',
+    boxSizing: 'border-box',
+    position: 'fixed'
+
+    // top: '90%',
+    // left: '90%',
+    // right: 'auto',
+    // bototm: 'auto',
+    // marginRight: '-90%',
+    // transform: 'translate(-90%, -90%)'
+  }
+}
+
+Modal.setAppElement(document.getElementsByTagName('html'))
+let subtitle
+
 const CustomModal = ({ date, title, children }) => {
-  let subtitle
-  const [modalIsOpen, setIsOpen] = React.useState(false)
+  const [modalIsOpen, setIsOpen] = useState(false)
+  const [customStyles, setCustomStyles] = useState({})
+  let startingWindowSize = [undefined]
+
+  if (typeof window !== 'undefined') {
+    startingWindowSize = [window.innerWidth, window.innerHeight]
+  }
+
+  const [windowSize, setWindowSize] = useState(startingWindowSize)
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowSize([window.innerWidth, window.innerHeight])
+    }
+
+    if (windowSize[0] >= '800') {
+      setCustomStyles(customStylesBig)
+    } else {
+      setCustomStyles(customStylesSmall)
+    }
+
+    window.addEventListener('resize', handleWindowResize)
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize)
+    }
+  }, [windowSize])
 
   function openModal() {
     setIsOpen(true)
@@ -36,8 +83,9 @@ const CustomModal = ({ date, title, children }) => {
   return (
     <div>
       <button type='text' onClick={openModal} className={btn}>
-        <span>{title}</span>
-        {/* <FontAwesomeIcon icon={faArrowRightLong} className={arrow} /> */}
+        <span>
+          {title} <FontAwesomeIcon icon={faAnglesRight} size='sm' />
+        </span>
       </button>
       <Modal
         contentLabel={title}
@@ -46,7 +94,7 @@ const CustomModal = ({ date, title, children }) => {
         onRequestClose={closeModal}
         style={customStyles}
       >
-        <div className={modalStyle}>
+        <div className={innerModal}>
           <div>
             <p>{date}</p>
             <button onClick={closeModal}>
