@@ -64,6 +64,10 @@ h3 {
   margin: 0px;
 }
 
+p {
+  font-size: 15px;
+}
+
 .info-box {
   border-radius: 20px;
   background: rgb(28, 27, 41);
