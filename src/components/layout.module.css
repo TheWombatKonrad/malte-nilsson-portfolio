@@ -13,6 +13,7 @@ html {
   font-size: calc(10px + 0.5vw);
   font-family: 'Montserrat', sans-serif;
   color: rgb(233, 228, 228);
+  width: 100vw;
 }
 
 @media only screen and (max-width: 799px) {
