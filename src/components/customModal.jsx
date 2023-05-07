@@ -5,34 +5,27 @@ import { faXmark, faAnglesRight } from '@fortawesome/free-solid-svg-icons'
 import Modal from 'react-modal'
 
 const customStylesBig = {
-  content: {
-    height: '300px',
-    width: '50%',
-    margin: 'auto',
-    padding: 0,
-    borderRadius: '20px',
-    boxSizing: 'border-box',
-    position: 'fixed'
-  }
+  height: '350px',
+  width: '600px',
+  margin: 'auto',
+  padding: 0,
+  borderRadius: '20px',
+  boxSizing: 'border-box'
 }
 
 const customStylesSmall = {
-  content: {
-    height: '300px',
-    width: '90%',
-    margin: 'auto',
-    padding: 0,
-    borderRadius: '20px',
-    boxSizing: 'border-box',
-    position: 'fixed'
+  height: '300px',
+  margin: 'auto',
+  padding: 0,
+  borderRadius: '20px',
+  boxSizing: 'border-box'
 
-    // top: '90%',
-    // left: '90%',
-    // right: 'auto',
-    // bototm: 'auto',
-    // marginRight: '-90%',
-    // transform: 'translate(-90%, -90%)'
-  }
+  // top: '90%',
+  // left: '90%',
+  // right: 'auto',
+  // bototm: 'auto',
+  // marginRight: '-90%',
+  // transform: 'translate(-90%, -90%)'
 }
 
 if (typeof document != 'undefined') {
@@ -57,6 +50,7 @@ const CustomModal = ({ date, title, children }) => {
     }
 
     if (windowSize[0] >= '800') {
+      console.log('big')
       setCustomStyles(customStylesBig)
     } else {
       setCustomStyles(customStylesSmall)
@@ -73,11 +67,6 @@ const CustomModal = ({ date, title, children }) => {
     setIsOpen(true)
   }
 
-  function afterOpenModal() {
-    // references are now sync'd and can be accessed.
-    // subtitle.style.color = '#f00'
-  }
-
   function closeModal() {
     setIsOpen(false)
   }
@@ -92,9 +81,11 @@ const CustomModal = ({ date, title, children }) => {
       <Modal
         contentLabel={title}
         isOpen={modalIsOpen}
-        onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
-        style={customStyles}
+        style={{
+          overlay: { boxSizing: 'border-box' },
+          content: customStyles
+        }}
       >
         <div className={innerModal}>
           <div>
