@@ -35,7 +35,9 @@ const customStylesSmall = {
   }
 }
 
-Modal.setAppElement(document.getElementsByTagName('html'))
+if (typeof document != 'undefined') {
+  Modal.setAppElement(document.getElementsByTagName('html'))
+}
 let subtitle
 
 const CustomModal = ({ date, title, children }) => {
