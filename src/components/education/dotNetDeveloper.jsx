@@ -3,7 +3,7 @@ import CustomModal from '../customModal'
 
 const DotNetDevloper = () => {
   return (
-    <CustomModal date={'date'} title={'.NET Developer'}>
+    <CustomModal date={'September 2021 - June 2023'} title={'.NET Developer'}>
       <p>list all courses</p>
     </CustomModal>
   )

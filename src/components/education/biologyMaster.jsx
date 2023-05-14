@@ -4,7 +4,7 @@ import CustomModal from '../customModal'
 const BiologyMaster = () => {
   return (
     <CustomModal
-      date={'date'}
+      date={'September 2014 - June 2019'}
       title={'Master in Evolutionary and Behavioral Ecology'}
     >
       <p>
