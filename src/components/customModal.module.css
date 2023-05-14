@@ -28,7 +28,7 @@ button:hover {
 }
 
 .btn {
-  font-size: inherit;
+  font-size: 15px;
   background: inherit;
   border: none;
   color: inherit;

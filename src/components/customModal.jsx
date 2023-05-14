@@ -50,7 +50,6 @@ const CustomModal = ({ date, title, children }) => {
     }
 
     if (windowSize[0] >= '800') {
-      console.log('big')
       setCustomStyles(customStylesBig)
     } else {
       setCustomStyles(customStylesSmall)
