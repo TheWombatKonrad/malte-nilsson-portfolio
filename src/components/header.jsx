@@ -16,14 +16,6 @@ const Header = () => {
         <div style={{ alignSelf: 'flex-end' }}>
           <h1>Malte Nilsson</h1>
           <h2>.NET Developer</h2>
-          <p
-            style={{
-              background: 'rgb(28, 27, 41, 0.7)',
-              padding: '5px'
-            }}
-          >
-            I'm looking for a new job! Available from June 2023.
-          </p>
         </div>
 
         <StaticImage
@@ -34,6 +26,14 @@ const Header = () => {
           className={introPhoto}
         />
       </div>
+      <p
+        style={{
+          background: 'rgb(28, 27, 41, 0.7)',
+          padding: '5px'
+        }}
+      >
+        I'm looking for a new job! Available from June 2023.
+      </p>
     </>
   )
 }

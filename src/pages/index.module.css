@@ -13,6 +13,7 @@
     box-sizing: border-box;
     border-radius: 20px;
     margin: auto;
+    padding: 4%;
   }
 
   #info {
@@ -21,8 +22,13 @@
   }
 }
 
+@media only screen and (max-width: 800px) {
+  .introduction {
+    padding: 1% 2%;
+  }
+}
+
 .introduction {
-  padding: 4%;
   background-image: url('../images/space-theme.jpg');
   background-size: cover;
   background-repeat: no-repeat;

@@ -5,12 +5,14 @@
 
 @media only screen and (max-width: 419px) {
   .intro-photo {
-    width: 60%;
+    width: 40%;
+    align-self: center;
   }
 }
 
 @media only screen and (min-width: 419px) and (max-width: 800px) {
   .intro-photo {
-    width: 30%;
+    width: 20%;
+    align-self: flex-end;
   }
 }
