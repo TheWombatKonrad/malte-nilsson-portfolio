@@ -4,6 +4,7 @@ import CustomModal from '../customModal'
 const Nonsultant = () => {
   return (
     <CustomModal
+      link={'Intership at Nonsultant'}
       date={'Oktober 2022 - December 2022'}
       title={'Internship at Nonsultant'}
     >

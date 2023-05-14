@@ -33,7 +33,7 @@ if (typeof document != 'undefined') {
 }
 let subtitle
 
-const CustomModal = ({ date, title, children }) => {
+const CustomModal = ({ link, date, title, children }) => {
   const [modalIsOpen, setIsOpen] = useState(false)
   const [customStyles, setCustomStyles] = useState({})
   let startingWindowSize = [undefined]
@@ -74,7 +74,7 @@ const CustomModal = ({ date, title, children }) => {
     <div>
       <button type='text' onClick={openModal} className={btn}>
         <span>
-          {title} <FontAwesomeIcon icon={faAnglesRight} size='sm' />
+          {link} <FontAwesomeIcon icon={faAnglesRight} size='sm' />
         </span>
       </button>
       <Modal
