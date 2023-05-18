@@ -76,7 +76,7 @@ const CustomModal = ({ link, date, title, children }) => {
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         style={{
-          overlay: { boxSizing: 'border-box', zIndex: 2, backgroundColor: 'rgba(179, 176, 176, 0.75)' },
+          overlay: { boxSizing: 'border-box', zIndex: 2, backgroundColor: 'rgba(0, 0, 0, 0.75)' },
           content: customStyles
         }}
       >
