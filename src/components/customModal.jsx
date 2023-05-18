@@ -10,7 +10,8 @@ const customStylesBig = {
   margin: 'auto',
   padding: 0,
   borderRadius: '20px',
-  boxSizing: 'border-box'
+  boxSizing: 'border-box',
+  border: 0
 }
 
 const customStylesSmall = {
@@ -18,20 +19,13 @@ const customStylesSmall = {
   margin: 'auto',
   padding: 0,
   borderRadius: '20px',
-  boxSizing: 'border-box'
-
-  // top: '90%',
-  // left: '90%',
-  // right: 'auto',
-  // bototm: 'auto',
-  // marginRight: '-90%',
-  // transform: 'translate(-90%, -90%)'
+  boxSizing: 'border-box',
+  border: 0
 }
 
 if (typeof document != 'undefined') {
   Modal.setAppElement(document.getElementsByTagName('html'))
 }
-let subtitle
 
 const CustomModal = ({ link, date, title, children }) => {
   const [modalIsOpen, setIsOpen] = useState(false)
@@ -82,7 +76,7 @@ const CustomModal = ({ link, date, title, children }) => {
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         style={{
-          overlay: { boxSizing: 'border-box' },
+          overlay: { boxSizing: 'border-box', zIndex: 2, backgroundColor: 'rgba(179, 176, 176, 0.75)' },
           content: customStyles
         }}
       >

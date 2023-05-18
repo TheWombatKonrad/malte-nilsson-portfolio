@@ -25,6 +25,9 @@
 @media only screen and (max-width: 800px) {
   .introduction {
     padding: 1% 2%;
+    box-shadow: 0px 10px 5px rgb(2, 6, 24);
+    z-index: 2;
+    position: relative;
   }
 }
 
@@ -33,7 +36,5 @@
   background-size: cover;
   background-repeat: no-repeat;
   color: rgb(235, 241, 248);
-  box-shadow: 0px 10px 5px rgb(2, 6, 24);
-  z-index: 999;
-  position: relative;
+  
 }

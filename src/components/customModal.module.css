@@ -34,22 +34,3 @@ button:hover {
   color: inherit;
   vertical-align: center;
 }
-
-/* .btn:hover .arrow {
-  opacity: 1;
-  right: -5rem;
-  font-size: inherit;
-}
-
-.arrow {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  right: -2rem;
-  top: 0;
-  opacity: 0;
-  height: 100%;
-  transition: all 0.2s linear 0s;
-  font-size: xx-small;
-} */
