@@ -22,6 +22,10 @@ const IndexPage = ({ data }) => {
   const [windowSize, setWindowSize] = useState(startingWindowSize)
 
   useEffect(() => {
+    document.documentElement.lang = "en"
+  })
+
+  useEffect(() => {
     const handleWindowResize = () => {
       setWindowSize([window.innerWidth, window.innerHeight])
     }
