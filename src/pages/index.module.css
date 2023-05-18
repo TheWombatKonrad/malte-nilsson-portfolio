@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
 .container {
   box-sizing: border-box;
   margin: auto;
@@ -36,5 +38,4 @@
   background-size: cover;
   background-repeat: no-repeat;
   color: rgb(235, 241, 248);
-  
 }

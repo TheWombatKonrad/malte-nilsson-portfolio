@@ -13,6 +13,9 @@ const Nonsultant = () => {
         another student and our supervisor we wrote a program to sync Specflow
         test results to e.g. Azure DevOps.
       </p>
+      <a href='https://github.com/Nonsultant/specgurka' target="_blank" rel="noreferrer">
+        Here's a link to the project on Github
+      </a>
     </CustomModal>
   )
 }

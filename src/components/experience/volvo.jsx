@@ -9,8 +9,8 @@ const BiologyMaster = () => {
       title={'Intership at Volvo'}
     >
       <p>
-        I am currently doing an internship at Volvo. Together with another
-        student I am refactoring a form from AngularJS to React.
+        I did an intership at Volvo where I migrated a part of an existing application
+        from AngularJS to React, integrating the new React component in the old code.
       </p>
     </CustomModal>
   )

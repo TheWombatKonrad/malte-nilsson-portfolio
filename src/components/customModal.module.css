@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
 .innerModal {
-  height: 100%;
   background: rgb(28, 27, 41);
   box-sizing: border-box;
-  padding: 3% 5%;
+  padding: 4% 5%;
 }
 
 .innerModal div {
@@ -28,7 +29,7 @@ button:hover {
 }
 
 .btn {
-  font-size: 15px;
+  font-size: 14px;
   background: inherit;
   border: none;
   color: inherit;

@@ -5,22 +5,24 @@ import { faXmark, faAnglesRight } from '@fortawesome/free-solid-svg-icons'
 import Modal from 'react-modal'
 
 const customStylesBig = {
-  height: '350px',
+  height: 'fit-content',
   width: '600px',
   margin: 'auto',
   padding: 0,
   borderRadius: '20px',
   boxSizing: 'border-box',
-  border: 0
+  border: 0,
+  background: 'rgb(28, 27, 41)'
 }
 
 const customStylesSmall = {
-  height: '300px',
+  height: 'fit-content',
   margin: 'auto',
-  padding: 0,
+  padding: '0',
   borderRadius: '20px',
   boxSizing: 'border-box',
-  border: 0
+  border: 0,
+  background: 'rgb(28, 27, 41)'
 }
 
 if (typeof document != 'undefined') {

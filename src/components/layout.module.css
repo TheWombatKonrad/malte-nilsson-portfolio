@@ -66,12 +66,16 @@ h3 {
 }
 
 p {
-  font-size: 15px;
+  font-size: 14px;
 }
 
 a {
-  font-size: 15px;
+  font-size: 14px;
   color: rgb(233, 228, 228);
+}
+
+li {
+  font-size: 14px;
 }
 
 .info-box {
