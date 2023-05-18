@@ -9,8 +9,8 @@ const DotNetDevloper = () => {
       title={'.NET Developer'}
     >
       <p>
-        I studied to become a .NET developer at Teknikhögskolan. 
-        Other than the courses listed below, I also 23 weeks in total of internship
+        I'm studying to become a .NET developer at Teknikhögskolan. 
+        Other than the courses listed below, I also did 23 weeks in total of internship
         at Nonsultant and Volvo.
       </p>
 
