@@ -3,12 +3,13 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { infoBox } from './layout.module.css'
 
 const Skills = ({ data }) => {
+
   return (
     <div className={infoBox}>
       <h3>Skills</h3>
-      <ul style={{ listStyleType: 'none' }}>
-        {data.map((node) => (
-          <li key={node.name} style={{ display: 'inline' }}>
+      <ul style={{ listStyleType: 'none', display: 'flex', justifyContent: 'space-evenly', flexWrap: 'wrap', marginLeft: '-30px' }}>
+        {data.map((node) => (node.childImageSharp != null && (
+          <li key={node.name} style={{margin: '2px'}}>
             <GatsbyImage
               alt={node.name}
               image={getImage(node.childImageSharp)}
@@ -16,7 +17,7 @@ const Skills = ({ data }) => {
                 width: '40px'
               }}
             />
-          </li>
+          </li>)
         ))}
         {/* //TODO fix formatting */}
       </ul>

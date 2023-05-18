@@ -69,6 +69,11 @@ p {
   font-size: 15px;
 }
 
+a {
+  font-size: 15px;
+  color: rgb(233, 228, 228);
+}
+
 .info-box {
   border-radius: 20px;
   background: rgb(28, 27, 41);

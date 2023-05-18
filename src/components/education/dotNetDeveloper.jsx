@@ -8,7 +8,20 @@ const DotNetDevloper = () => {
       date={'September 2021 - June 2023'}
       title={'.NET Developer'}
     >
-      <p>list all courses</p>
+      <p>
+        I studied to become a .NET developer at Teknikhögskolan. 
+        Other than the courses listed below, I also 23 weeks in total of internship
+        at Nonsultant and Volvo.
+      </p>
+
+      <ul>
+        <li>C#, programming in a context</li>
+        <li>Databses in a context</li>
+        <li>Frontend</li>
+        <li>Backend</li>
+        <li>Cloud-based applications</li>
+        <li>Producing and delivering software</li>
+      </ul>
     </CustomModal>
   )
 }
