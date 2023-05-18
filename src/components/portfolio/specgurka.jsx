@@ -15,7 +15,7 @@ const DotNetDevloper = () => {
         e.g. Azure DevOps.
       </p>
 
-      <a href='https://github.com/Nonsultant/specgurka' target="_blank">
+      <a href='https://github.com/Nonsultant/specgurka' target="_blank" rel="noreferrer">
         Link to the project on Github
       </a>
     </CustomModal>

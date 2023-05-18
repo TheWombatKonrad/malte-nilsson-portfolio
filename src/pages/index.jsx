@@ -32,8 +32,6 @@ const IndexPage = ({ data }) => {
 
     window.addEventListener('resize', handleWindowResize)
 
-    console.log(windowSize)
-
     return () => {
       window.removeEventListener('resize', handleWindowResize)
     }
