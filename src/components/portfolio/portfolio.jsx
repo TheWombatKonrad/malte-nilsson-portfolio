@@ -1,6 +1,7 @@
-import * as React from 'react'
-import Specgurka from './specgurka'
-import { infoBox } from '../layout.module.css'
+import * as React from "react";
+import Specgurka from "./specgurka";
+import { infoBox } from "../layout.module.css";
+import WonderfulRabbits from "./wonderfulRabbits";
 
 const Portfolio = () => {
   return (
@@ -10,9 +11,12 @@ const Portfolio = () => {
         <li>
           <Specgurka />
         </li>
+        <li>
+          <WonderfulRabbits />
+        </li>
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default Portfolio
+export default Portfolio;

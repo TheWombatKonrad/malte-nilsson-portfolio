@@ -1,12 +1,12 @@
-import * as React from 'react'
-import CustomModal from '../customModal'
+import * as React from "react";
+import CustomModal from "../customModal";
 
-const DotNetDevloper = () => {
+const Specgurka = () => {
   return (
     <CustomModal
-      link={'Specgurka'}
-      date={'date'}
-      title={'Specgurka (BDD Gherkin Specflow)'}
+      link={"Specgurka"}
+      date={"2022"}
+      title={"Specgurka (BDD Gherkin Specflow)"}
     >
       <p>
         While doing an intership at Nonsultant, me and another student, with
@@ -15,11 +15,15 @@ const DotNetDevloper = () => {
         e.g. Azure DevOps.
       </p>
 
-      <a href='https://github.com/Nonsultant/specgurka' target="_blank" rel="noreferrer">
+      <a
+        href="https://github.com/Nonsultant/specgurka"
+        target="_blank"
+        rel="noreferrer"
+      >
         Link to the project on Github
       </a>
     </CustomModal>
-  )
-}
+  );
+};
 
-export default DotNetDevloper
+export default Specgurka;
