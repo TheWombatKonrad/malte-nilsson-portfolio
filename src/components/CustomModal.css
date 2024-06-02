@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+.inner-modal {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 10px;
+  height: 100%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  background: rgb(28, 27, 41);
+}
+
+.inner-modal::-webkit-scrollbar {
+  display: none;
+}
+
+.inner-modal div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#modal-top-bar {
+  width: 100%;
+}
+
+#modal-top-bar button {
+  background: inherit;
+  color: inherit;
+  border: none;
+  font-size: x-large;
+  left: 80%;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.open-modal-button {
+  font-size: 14px;
+  background: inherit;
+  border: none;
+  color: inherit;
+  vertical-align: center;
+}
+
+#modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
