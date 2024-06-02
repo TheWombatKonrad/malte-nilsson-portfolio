@@ -14,7 +14,7 @@ const Contact = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <FontAwesomeIcon icon={faEnvelope} size="xl" />
+            <FontAwesomeIcon icon={faEnvelope} size="xl" title="email" />
           </a>
         </li>
         <li>
@@ -23,7 +23,7 @@ const Contact = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <FontAwesomeIcon icon={faLinkedin} size="xl" />
+            <FontAwesomeIcon icon={faLinkedin} size="xl" title="linkedin" />
           </a>
         </li>
       </ul>
