@@ -17,7 +17,7 @@ const Skills = () => {
         {skills.map((skill, index) => (
           <li key={index} className="skill">
             <img
-              src={require(`../images/icons/${skill}.png`)}
+              src={require(`../images/icons/${skill}.webp`)}
               alt={skill}
               style={{
                 width: "40px",
