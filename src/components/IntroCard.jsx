@@ -11,7 +11,7 @@ const IntroCard = () => {
 
         <img
           alt="Me, outside."
-          src={require("../images/profile-pic.jpg")}
+          src={require("../images/profile-pic.webp")}
           loading="eager"
         />
       </div>
