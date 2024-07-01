@@ -16,13 +16,7 @@ const Skills = () => {
       <ul id="skills">
         {skills.map((skill, index) => (
           <li key={index} className="skill">
-            <img
-              src={require(`../images/icons/${skill}.webp`)}
-              alt={skill}
-              style={{
-                width: "40px",
-              }}
-            />
+            <img src={require(`../images/icons/${skill}.webp`)} alt={skill} />
             <p className="skill-name">{skill}</p>
           </li>
         ))}

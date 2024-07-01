@@ -30,3 +30,8 @@
   visibility: visible;
   opacity: 1;
 }
+
+.skill img {
+  width: 40px;
+  height: fit-content;
+}
