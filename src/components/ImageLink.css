@@ -1,0 +1,16 @@
+#image-link {
+  border: 2px solid rgb(233, 228, 228);
+  border-radius: 25px;
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(85, 85, 87);
+  padding: 20px;
+  margin: 10px 0px;
+}
+
+#image-link img {
+  width: 100%;
+}

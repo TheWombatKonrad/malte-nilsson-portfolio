@@ -1,0 +1,40 @@
+.container {
+  margin: auto;
+  display: flex;
+}
+
+#info {
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 0px) {
+  #info {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .container {
+    width: 49%;
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  #intro-card-container {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .introduction {
+    padding: 1% 2%;
+    box-shadow: 0px 10px 5px rgb(2, 6, 24);
+    z-index: 2;
+    position: relative;
+  }
+
+  #intro-card-container {
+    display: none;
+  }
+}
