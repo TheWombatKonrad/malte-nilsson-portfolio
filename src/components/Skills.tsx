@@ -10,6 +10,8 @@ const Skills = () => {
     "TypeScript",
   ];
 
+  //todo: add .net?
+
   return (
     <div className="info-box">
       <h3>Skills</h3>
@@ -21,6 +23,7 @@ const Skills = () => {
                 new URL(`../assets/images/icons/${skill}.webp`, import.meta.url)
                   .href
               }
+              alt={skill}
             />
             <p className="skill-name">{skill}</p>
           </li>
