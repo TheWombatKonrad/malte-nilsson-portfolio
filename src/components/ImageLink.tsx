@@ -1,10 +1,10 @@
 import "./ImageLink.css";
 
-function ImageLink({ image, url }) {
+function ImageLink(props: { image: string; url: string }) {
   return (
     <div id="image-link">
-      <a href={url} target="_blank" rel="noreferrer">
-        <img alt="The Frogsweeper gameboard." src={image} />
+      <a href={props.url} target="_blank" rel="noreferrer">
+        <img alt="The Frogsweeper gameboard." src={props.image} />
       </a>
     </div>
   );
