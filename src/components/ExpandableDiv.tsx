@@ -34,10 +34,10 @@ function ExpandableDiv(props: {
     <div className="expandable-div" id={props.id}>
       <button onClick={onClick}>
         <FontAwesomeIcon icon={arrow} size="sm" />
-        <p>{props.title}</p>
+        <h4>{props.title}</h4>
       </button>
       <div hidden className="content">
-        <p>{props.date}</p>
+        <p className="date">{props.date}</p>
         <div>{props.children}</div>
       </div>
     </div>
