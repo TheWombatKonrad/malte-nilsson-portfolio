@@ -6,7 +6,7 @@ const Frogsweeper = () => {
   return (
     <ExpandableDiv
       date="2024"
-      title="Frogsweeper - Let's Sweep Frogs"
+      title="Frogsweeper - Let's Sweep Frogs (React/TS)"
       id="frogsweeper"
     >
       <p>

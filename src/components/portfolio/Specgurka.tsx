@@ -3,7 +3,7 @@ import ExpandableDiv from "../ExpandableDiv";
 const Specgurka = () => {
   return (
     <ExpandableDiv
-      title="Specgurka (BDD Gherkin Specflow)"
+      title="Specgurka (BDD Gherkin Specflow) (C#)"
       date="2022"
       id="specgurka"
     >

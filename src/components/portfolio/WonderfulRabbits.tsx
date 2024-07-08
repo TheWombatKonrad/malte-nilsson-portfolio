@@ -2,7 +2,11 @@ import ExpandableDiv from "../ExpandableDiv";
 
 const WonderfulRabbits = () => {
   return (
-    <ExpandableDiv title="Wonderful Rabbits" date="2023" id="wonderful-rabbits">
+    <ExpandableDiv
+      title="Wonderful Rabbits (C#)"
+      date="2023"
+      id="wonderful-rabbits"
+    >
       <p>
         After graduating I have been working on a small project, mainly to
         practice programming. The project is still in it's very early phases and
