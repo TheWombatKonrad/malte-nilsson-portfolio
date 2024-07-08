@@ -11,6 +11,7 @@ const Skills = () => {
   ];
 
   //todo: add .net?
+  //vitest? .net testing framework? ASP.NET Core? etc?
 
   return (
     <div className="info-box">
