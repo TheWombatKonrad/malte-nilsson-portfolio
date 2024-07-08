@@ -8,13 +8,13 @@ const Portfolio = () => {
       <h3>Portfolio</h3>
       <ul>
         <li>
+          <Frogsweeper />
+        </li>
+        <li>
           <Specgurka />
         </li>
         <li>
           <WonderfulRabbits />
-        </li>
-        <li>
-          <Frogsweeper />
         </li>
       </ul>
     </div>
