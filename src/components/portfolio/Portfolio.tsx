@@ -1,10 +1,11 @@
-import Specgurka from "./Specgurka";
-import WonderfulRabbits from "./WonderfulRabbits";
-import Frogsweeper from "./Frogsweeper";
+import Specgurka from './Specgurka';
+import Frogsweeper from './Frogsweeper';
+import ZombieHouse2000 from './ZombieHouse2000';
+import WildlifeTrackerSystem from './WildlifeTrackerSystem';
 
 const Portfolio = () => {
   return (
-    <div className="info-box">
+    <div className='info-box'>
       <h3>Portfolio</h3>
       <ul>
         <li>
@@ -14,7 +15,10 @@ const Portfolio = () => {
           <Specgurka />
         </li>
         <li>
-          <WonderfulRabbits />
+          <ZombieHouse2000 />
+        </li>
+        <li>
+          <WildlifeTrackerSystem />
         </li>
       </ul>
     </div>
