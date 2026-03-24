@@ -1,11 +1,11 @@
-import ExpandableDiv from "../ExpandableDiv";
+import ExpandableDiv from '../ExpandableDiv';
 
 const DotNetDevloper = () => {
   return (
     <ExpandableDiv
-      title=".NET Developer"
-      date="September 2021 - June 2023"
-      id=".net"
+      title='.NET Developer'
+      date='September 2021 - June 2023'
+      id='.net'
     >
       <p>
         I studied .NET developing at Teknikhögskolan. Other than the courses
@@ -13,9 +13,9 @@ const DotNetDevloper = () => {
         and Volvo.
       </p>
 
-      <ul style={{ listStyle: "circle", marginLeft: "-10px" }}>
+      <ul style={{ listStyle: 'circle', marginLeft: '-10px' }}>
         <li>C#, programming in a context</li>
-        <li>Databses in a context</li>
+        <li>Databases in a context</li>
         <li>Frontend</li>
         <li>Backend</li>
         <li>Cloud-based applications</li>
