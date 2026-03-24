@@ -1,24 +1,23 @@
-import "./Skills.css";
+import './Skills.css';
 
 const Skills = () => {
   const skills: string[] = [
-    "C-Sharp",
-    "CSS",
-    "HTML",
-    "JavaScript",
-    "React",
-    "TypeScript",
+    'C-Sharp',
+    'CSS',
+    'HTML',
+    'JavaScript',
+    'React',
+    'TypeScript',
+    'Python',
+    'WPF',
   ];
 
-  //todo: add .net?
-  //vitest? .net testing framework? ASP.NET Core? etc?
-
   return (
-    <div className="info-box">
+    <div className='info-box'>
       <h3>Skills</h3>
-      <ul id="skills">
+      <ul id='skills'>
         {skills.map((skill: string, index: number) => (
-          <li key={index} className="skill">
+          <li key={index} className='skill'>
             <img
               src={
                 new URL(`../assets/images/icons/${skill}.webp`, import.meta.url)
@@ -26,7 +25,7 @@ const Skills = () => {
               }
               alt={skill}
             />
-            <p className="skill-name">{skill}</p>
+            <p className='skill-name'>{skill}</p>
           </li>
         ))}
       </ul>
