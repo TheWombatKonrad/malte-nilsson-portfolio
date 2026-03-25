@@ -7,7 +7,7 @@ const IntroCard = () => {
       <div>
         <div>
           <h1>Malte Nilsson</h1>
-          <h2>.NET Developer</h2>
+          <h2>.NET Developer 22</h2>
         </div>
 
         <div>
