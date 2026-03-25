@@ -7,7 +7,7 @@ const HeaderComponent = () => {
       <div id='header-main'>
         <div>
           <h1>Malte Nilsson</h1>
-          <h2>.NET Developer 24</h2>
+          <h2>.NET Developer</h2>
         </div>
 
         <img alt='Me, outside.' src={profilePic} loading='eager' />
