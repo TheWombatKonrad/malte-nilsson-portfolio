@@ -5,7 +5,7 @@
   padding: 4%;
   border-radius: 20px;
 
-  background-image: url("../assets/images/space-theme.webp");
+  background-image: url('../assets/images/space-theme.webp');
   background-size: cover;
   background-repeat: no-repeat;
   color: rgb(235, 241, 248);
@@ -24,11 +24,11 @@
   flex-direction: column;
 }
 
-#intro-card div img {
+#maltes-photo {
   border: 2px solid rgb(235, 241, 248);
   border-radius: 50%;
   width: 40%;
-  height: fit-content;
+  height: auto;
   text-align: center;
   line-height: 100px;
 }
