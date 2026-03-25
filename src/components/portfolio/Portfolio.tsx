@@ -9,6 +9,9 @@ const Portfolio = () => {
       <h3>Portfolio</h3>
       <ul>
         <li>
+          <WildlifeTrackerSystem />
+        </li>
+        <li>
           <Frogsweeper />
         </li>
         <li>
@@ -16,9 +19,6 @@ const Portfolio = () => {
         </li>
         <li>
           <ZombieHouse2000 />
-        </li>
-        <li>
-          <WildlifeTrackerSystem />
         </li>
       </ul>
     </div>
