@@ -7,15 +7,10 @@ const IntroCard = () => {
       <div>
         <div>
           <h1>Malte Nilsson</h1>
-          <h2>.NET Developer 22</h2>
+          <h2>.NET Developer</h2>
         </div>
 
-        <img
-          alt='Me, outside.'
-          src={profilePic}
-          loading='eager'
-          id='maltes-photo'
-        />
+        <img alt='Me, outside.' src={profilePic} loading='eager' />
       </div>
       <p
         style={{
