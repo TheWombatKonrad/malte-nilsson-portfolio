@@ -10,14 +10,12 @@ const IntroCard = () => {
           <h2>.NET Developer 22</h2>
         </div>
 
-        <div>
-          <img
-            alt='Me, outside.'
-            src={profilePic}
-            loading='eager'
-            id='maltes-photo'
-          />
-        </div>
+        <img
+          alt='Me, outside.'
+          src={profilePic}
+          loading='eager'
+          id='maltes-photo'
+        />
       </div>
       <p
         style={{
