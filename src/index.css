@@ -43,7 +43,3 @@ a {
 li {
   font-size: 14px;
 }
-
-img {
-  height: intrinsic; /* This is necessary to stop safari from stretching the images. */
-}
