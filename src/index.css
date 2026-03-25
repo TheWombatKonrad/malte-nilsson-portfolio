@@ -43,3 +43,8 @@ a {
 li {
   font-size: 14px;
 }
+
+blockquote {
+  font-size: 13px;
+  font-style: italic;
+}

@@ -1,11 +1,15 @@
-import Nonsultant from "./Nonsultant";
-import Volvo from "./Volvo";
+import Nonsultant from './Nonsultant';
+import Parasites from './Parasites';
+import Volvo from './Volvo';
 
 const Experience = () => {
   return (
-    <div className="info-box">
+    <div className='info-box'>
       <h3>Experience</h3>
       <ul>
+        <li>
+          <Parasites />
+        </li>
         <li>
           <Nonsultant />
         </li>
